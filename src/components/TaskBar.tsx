@@ -63,16 +63,16 @@ function TaskBar() {
 
       <div className="buttons-text z-10 absolute w-screen flex justify-start items-center mb-[1.5%] ml-[17%]" id='t-text'>
         {/* <img className='w-16 mr-[68px] invisible' src={ Cafe }></img> */}
-        <div className="text-2xl font-molu text-[#16365c] mr-[108px]" id="t-cafe t-text">카페</div>
-        <div className="text-2xl font-molu text-[#16365c] mr-[97px]" id="t-sche t-text">스케줄</div>
-        <div className="text-2xl font-molu text-[#16365c] mr-[114px]" id="t-student t-text">학생</div>
-        <div className="text-2xl font-molu text-[#16365c] mr-[114px]" id="t-set t-text">편성</div>
-        <div className="text-2xl font-molu text-[#16365c] mr-[112px]" id="t-circle t-text">서클</div>
-        <div className="text-2xl font-molu text-[#16365c] mr-[114px]" id="t-build t-text">제조</div>
-        <div className="text-2xl font-molu text-[#16365c] mr-[123px]" id="t-store t-text">상점</div>
-        <div className="text-2xl font-molu text-[#16365c]" id="t-gacha">모집</div>
+        <div className="text-2xl font-molu text-[#16365c] mr-[108px]" id="t-cafe t-text">咖啡馆</div>
+        <div className="text-2xl font-molu text-[#16365c] mr-[97px]" id="t-sche t-text">日程表</div>
+        <div className="text-2xl font-molu text-[#16365c] mr-[114px]" id="t-student t-text">学生</div>
+        <div className="text-2xl font-molu text-[#16365c] mr-[114px]" id="t-set t-text">编队</div>
+        <div className="text-2xl font-molu text-[#16365c] mr-[112px]" id="t-circle t-text">社团</div>
+        <div className="text-2xl font-molu text-[#16365c] mr-[114px]" id="t-build t-text">制造</div>
+        <div className="text-2xl font-molu text-[#16365c] mr-[123px]" id="t-store t-text">商店</div>
+        <div className="text-2xl font-molu text-[#16365c]" id="t-gacha">抽卡</div>
       </div>
-      
+
       <div className="absolute w-screen flex justify-end items-center mb-[1.2%] mr-[175px]">
         <div className="text-xl font-molu text-[#16365c] mt-3" id="time">{ time }</div>
       </div>

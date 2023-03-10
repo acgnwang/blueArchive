@@ -77,7 +77,7 @@ function Main() {
   const [isFullScreen, setIsFullScreen] = useState(false)
   let _init = 0
   const [nowEndLoading, setNowEndLoading] = useState(false)
-  
+
   const Characters = [{"name": "노노미", "text": "즐거운 하루 되세요!", "school": "Abydos", "profile": "https://static.miraheze.org/bluearchivewiki/a/ad/Nonomi.png", "artwork": "https://static.miraheze.org/bluearchivewiki/3/3f/Nonomi_full.png"}
     , {"name": "노노미(수영복)", "text": " ", "school": "Abydos", "profile": "https://static.miraheze.org/bluearchivewiki/9/98/Nonomi_%28Swimsuit%29.png", "artwork": "https://static.miraheze.org/bluearchivewiki/0/01/Nonomi_%28Swimsuit%29_full.png"}
     , {"name": "마리", "text": "늘 평안하세요", "school": "Trinity", "profile": "https://static.miraheze.org/bluearchivewiki/4/4f/Mari.png", "artwork": "https://static.miraheze.org/bluearchivewiki/8/8f/Mari_full.png"}
@@ -223,7 +223,7 @@ function Main() {
 
     setMaxExp(1000)
     setExpProgress(612)
-    
+
     console.log(localStorage.getItem("MemorialSelection"))
     console.log(sessionStorage.getItem("isAlreadyLoading"))
 
@@ -231,7 +231,7 @@ function Main() {
       SelectMemorial(String(localStorage.getItem("MemorialSelection")))
     }
   }, [])
-  
+
   return (
     <div className="main bg-cover font-molu-bold overflow-x-hidden">
 
@@ -270,15 +270,15 @@ function Main() {
 
       {/* FullScreen */}
       <div className="w-screen flex justify-end fixed md:mt-[80px] pr-4" id="full-top">
-        <button id="fullscreen" className='pl-2 pr-2 pt-1 pb-1 m-2 md:text-2xl text-[#16365C] bg-[#CBCCFF] rounded-md shadow-lg transition duration-100 active:scale-90' onClick={FullScreen}>전체화면</button>
+        <button id="fullscreen" className='pl-2 pr-2 pt-1 pb-1 m-2 md:text-2xl text-[#16365C] bg-[#CBCCFF] rounded-md shadow-lg transition duration-100 active:scale-90' onClick={FullScreen}>全屏</button>
       </div>
 
       {/* Music Button */}
       { JSON.parse(isMusic.toString()) == false ?
         <div className="absolute w-full h-full backdrop-brightness-[0.2] flex items-center justify-center z-50 drop-shadow-2xl">
           <div className="flex flex-col justify-center items-center w-[600px] h-[300px] bg-white rounded-2xl">
-            <div className="font-molu text-xl mb-8">※풀스크린,전체화면으로 설정해주세요.<br/>사운드 재생을 위해 확인 버튼을 눌러주세요.<br/><br/>영상의 용량 문제로 인해 메모리얼 재생 중 약간의 지연이 생길 수 있습니다.</div>
-            <button className='music-btn bg-[#456399] font-molu transition duration-100 active:scale-90 text-white p-3 w-[80px] drop-shadow-2xl flex justify-center items-center drop-shadow-xl rounded-lg' onClick={onMusic}>확인</button>
+            <div className="font-molu text-xl mb-8">※全屏，请设置为全屏.<br/>按OK键播放声音.<br/><br/>由于视频质量问题，在播放过程中可能会有轻微延迟.</div>
+            <button className='music-btn bg-[#456399] font-molu transition duration-100 active:scale-90 text-white p-3 w-[80px] drop-shadow-2xl flex justify-center items-center drop-shadow-xl rounded-lg' onClick={onMusic}>OK</button>
           </div>
         </div>
        : null }
@@ -300,33 +300,33 @@ function Main() {
             <div className="cards flex flex-wrap overflow-hidden overflow-y-visible justify-center items-start w-[650px] h-[280px] mt-12">
               <button className='m-4' onClick={ () => SelectMemorial("Yuuka") }>
                 <img className='w-[150px] transition duration-100 active:scale-95 hover:scale-105' src={ yuuka_gym } />
-                <div className='text-xl text-[#2c4663]'>유우카 (체육복)</div>
+                <div className='text-xl text-[#2c4663]'>优香 (运动装)</div>
               </button>
               <button className='m-4' onClick={ () => SelectMemorial("Hoshino") }>
                 <img className='w-[150px] transition duration-100 active:scale-95 hover:scale-105' src={ hoshino_mizugi } />
-                <div className='text-xl text-[#2c4663]'>호시노 (수영복)</div>
+                <div className='text-xl text-[#2c4663]'>星野 (泳装)</div>
               </button>
               <button className='m-4' onClick={ () => SelectMemorial("Azusa") }>
                 <img className='w-[150px] transition duration-100 active:scale-95 hover:scale-105' src={ Characters[Characters.findIndex(e => e.name == "아즈사(수영복)")].profile } />
-                <div className='text-xl text-[#2c4663]'>아즈사 (수영복)</div>
+                <div className='text-xl text-[#2c4663]'>梓 (泳装)</div>
               </button>
               <button className='m-4' onClick={ () => SelectMemorial("Atsuko") }>
                 <img className='w-[150px] transition duration-100 active:scale-95 hover:scale-105' src={ Characters[Characters.findIndex(e => e.name == "아츠코")].profile } />
-                <div className='text-xl text-[#2c4663]'>아츠코</div>
+                <div className='text-xl text-[#2c4663]'>亚津子</div>
               </button>
               <button className='m-4' onClick={ () => SelectMemorial("Mika") }>
                 <img className='w-[150px] transition duration-100 active:scale-95 hover:scale-105' src={ Characters[Characters.findIndex(e => e.name == "미카")].profile } />
-                <div className='text-xl text-[#2c4663]'>미카</div>
+                <div className='text-xl text-[#2c4663]'>未花</div>
               </button>
               <button className='m-4' onClick={ () => SelectMemorial("Hina(Swim)") }>
                 <img className='w-[150px] transition duration-100 active:scale-95 hover:scale-105' src={ Characters[Characters.findIndex(e => e.name == "히나(수영복)")].profile } />
-                <div className='text-xl text-[#2c4663]'>히나(수영복)</div>
+                <div className='text-xl text-[#2c4663]'>日奈(泳装)</div>
               </button>
             </div>
             <div className="flex flex-col items-center">
               <div className="border-b-[2px] border-gray-300 w-[650px]"></div>
               <button className='music-btn bg-[#456399] font-molu transition duration-100 active:scale-90 text-white p-3 w-[80px] drop-shadow-2xl flex justify-center items-center drop-shadow-xl rounded-lg mt-4 mb-4' onClick={onClickQuit}>확인</button>
-            </div>  
+            </div>
           </div>
         </div>
        : null }
@@ -401,7 +401,7 @@ function Main() {
             </button>
           </div>
           <div className=" flex justify-start w-[1100px] h-[550px] bg-white rounded-b-xl">
-          
+
             <div className="left-bar bg-[#4c5b70] w-[110px] h-[550px] [990px] rounded-bl-xl">
             <button className='chat_btn' onClick={ ()=>setMomoTalkNow(0) }>
                 <div className="square w-[110px] h-[105px] flex justify-center items-center hover:bg-[#647789] opacity-50 hover:opacity-100">
@@ -428,7 +428,7 @@ function Main() {
                   </div>
                   <div className="students mt-2 h-[460px] w-[500px] overflow-y-auto overflow-x-hidden">
                     { Characters.map((i) => {
-                      return ( 
+                      return (
                         <button className="chat-one w-[500px] h-[85px] hover:bg-[#dce5ec] flex justify-start items-center" onClick={ () => { SelectStudent(i.name) } }>
                           <img className='rounded-full object-cover w-[68px] h-[68px] ml-4' src={ i.profile } />
                           <div className="name-last ml-4 mt-[2px] flex flex-col items-start">
@@ -497,7 +497,7 @@ function Main() {
 
                 </div>
               </div>
-            
+
               <div className="chat-real w-[490px] h-[534px] rounded-br-xl bg-white pt-4 overflow-y-auto overflow-x-hidden">
 
                 {/* Hayase Yuuka */}
@@ -527,7 +527,7 @@ function Main() {
                     }
                   }) )
                   : null }
-                
+
                 { whoChat == "Yuuka" ?
                   ( Yuuka_Chats2.map((i) => {
                     if (i.split('')[0] == "*") {
@@ -577,7 +577,7 @@ function Main() {
                     }
                   }) )
                   : null }
-                
+
                 { whoChat == "Hina(Swim)" ?
                   ( HinaSwim_Chats2.map((i) => {
                     if (i.split('')[0] == "*") {
@@ -820,7 +820,7 @@ function Main() {
           </div>
 
           <div className="name">
-            <div className="usrname font-molu-bold text-white text-[24px]" id="name">귀여운디아</div>
+            <div className="usrname font-molu-bold text-white text-[24px]" id="name">聪明的Sensei</div>
             <div className="exp-bar bg-[#3e4f61] h-[5px] w-[215px]" id="exp">
               {/* <div className="exp-progress bg-[#59eefb] h-[5px] w-[60%]"></div> */}
               <div id="exp-bar">
@@ -850,13 +850,13 @@ function Main() {
         </div>
 
         <div className="absolute flex justify-center ml-[120px] -mt-5">
-          <div className='notice w-[60px] text-[#16365c] text-[23px] m-4 mr-[45px]' id="t-notice">공지</div>
-          <div className='momo-talk w-[70px]  text-[#16365c] text-[23px] m-4' id="t-momotalk">모모톡</div>
+          <div className='notice w-[60px] text-[#16365c] text-[23px] m-4 mr-[45px]' id="t-notice">公告</div>
+          <div className='momo-talk w-[70px]  text-[#16365c] text-[23px] m-4' id="t-momotalk">momotalk</div>
         </div>
 
         <div className="absolute flex justify-center ml-[110px] mt-[195px]">
-          <div className='notice w-[60px] text-[#16365c] text-[23px] m-4 mr-[18px]' id="t-mission">미션</div>
-          <div className='momo-talk w-[100px] text-[#16365c] text-[23px] m-4' id="t-blue">청휘석구매</div>
+          <div className='notice w-[60px] text-[#16365c] text-[23px] m-4 mr-[18px]' id="t-mission">任务</div>
+          <div className='momo-talk w-[100px] text-[#16365c] text-[23px] m-4' id="t-blue">购买青石</div>
         </div>
       </div>
 
